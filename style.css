@@ -1,0 +1,21 @@
+@import url(reset.css);
+
+
+
+.wrapper{
+  display: grid;
+  width: 600px;
+  height: 600px;
+  margin: 50px auto;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  border: 1px solid #000;
+}
+
+.child{
+  border: 1px solid #000;
+}
+
+.btnNewGrid{
+  padding: 10px;
+}
