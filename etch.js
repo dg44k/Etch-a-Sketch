@@ -4,7 +4,7 @@ let SIZE = 16;
 
 createGrid();
 
-wrapper.onmouseover = fillElem;
+wrapper.onmouseover = fillRandomRGB;
 btnNewGrid.onclick = getSize;
 
 function createGrid(){
@@ -33,4 +33,14 @@ function getSize(){
 
   wrapper.innerHTML = '';
   createGrid();
+}
+
+function fillRandomRGB(e){
+  const goal = e.target;
+  if(goal == wrapper) return;
+  if(goal.style.backgroundColor == "rgb(0, 0, 0)") return;
+  
+  goal.style.backgroundColor = `RGB(${Math.random()* 255}, 
+                                    ${Math.random()* 255}, 
+                                    ${Math.random()* 255})`; 
 }
