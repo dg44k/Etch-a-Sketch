@@ -5,6 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="icons8-кисть-16.png" type="image/x-icon">
   <script src="etch.js" defer></script>
   <title>Etch a Sketch</title>
 </head>
@@ -12,14 +16,17 @@
   <header>
     <h1>Etch a Sketch</h1>
   </header>
-  
+
   <main>
     <div class="settings">
-      <button class="btnNewGrid">Choice of Size</button>
-      <button class="btnErase">Eraser</button>
-      <button class="btnEraseAll">Clear All</button>
-      <button class="btnBlackBrush">Black Brush</button>
-      <button class="btnMultiBrush">Multicolor Brush</button>
+      <div class="heading">Setting</div>
+      <div class="buttons">
+        <button class="btnNewGrid btn">Choice of Size</button>
+        <button class="btnErase btn">Eraser</button>
+        <button class="btnEraseAll btn">Clear All</button>
+        <button class="btnBlackBrush btn">Black Brush</button>
+        <button class="btnMultiBrush btn">Multicolor Brush</button>
+      </div>
     </div>
     <div class="wrapper"></div>
   </main>
