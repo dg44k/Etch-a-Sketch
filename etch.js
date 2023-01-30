@@ -5,12 +5,9 @@ const btnEraseAll = document.querySelector(".btnEraseAll");
 let SIZE = 16;
 
 createGrid();
-
 wrapper.onmouseover = fillRandomRGB;
 btnNewGrid.onclick = getSize;
-btnErase.onclick = () =>{
-wrapper.onmouseover = eraseElem;
-}
+btnErase.onclick = () => wrapper.onmouseover = eraseElem;
 btnEraseAll.onclick = eraseAll;
 
 function createGrid(){
@@ -36,7 +33,6 @@ function getSize(){
     alert('Enter a number greater than 1 and less than 100');
     SIZE = +prompt("Enter size grid:", 16);
   }
-
   wrapper.innerHTML = '';
   createGrid();
 }
