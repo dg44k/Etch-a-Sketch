@@ -1,11 +1,15 @@
 const wrapper = document.querySelector(".wrapper");
 const btnNewGrid = document.querySelector(".btnNewGrid");
+const btnErase = document.querySelector(".btnErase");
 let SIZE = 16;
 
 createGrid();
 
 wrapper.onmouseover = fillRandomRGB;
 btnNewGrid.onclick = getSize;
+btnErase.onclick = () =>{
+wrapper.onmouseover = eraseElem;
+console.log(1)}
 
 function createGrid(){
   wrapper.style.cssText = `grid-template-columns: repeat(${SIZE}, 1fr);
@@ -43,4 +47,8 @@ function fillRandomRGB(e){
   goal.style.backgroundColor = `RGB(${Math.random()* 255}, 
                                     ${Math.random()* 255}, 
                                     ${Math.random()* 255})`; 
+}
+
+function eraseElem(e){
+  e.target.style.backgroundColor = "#fff";
 }
