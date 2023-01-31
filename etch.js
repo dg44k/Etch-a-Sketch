@@ -33,9 +33,8 @@ function fillElem(e){
 function getSize(){
   SIZE = +prompt("Enter new size of grid", 16);
 
-  if(isNaN(SIZE) || SIZE > 100 || SIZE < 1){
-    alert('Enter a number greater than 1 and less than 100');
-    SIZE = +prompt("Enter size grid:", 16);
+  if(isNaN(SIZE) || SIZE > 100 || SIZE <= 0){
+    SIZE = 16;
   }
   wrapper.innerHTML = '';
   createGrid();
